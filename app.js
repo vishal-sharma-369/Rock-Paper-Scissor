@@ -12,7 +12,7 @@ window.onload = function()
         let choice = document.createElement('img');
         choice.id = choices[i];
 
-        choice.src = 'Rock-Paper-Scissor/images/'+ choices[i] + '.png';
+        choice.src = '/Rock-Paper-Scissor/images/'+ choices[i] + '.png';
         choice.addEventListener("click" , selectChoice);
         document.getElementById("choices").append(choice);
     }
@@ -21,10 +21,10 @@ window.onload = function()
 function selectChoice()
 {
     you = this.id;
-    document.getElementById("your-choice").src = 'Rock-Paper-Scissor/images/' + you + '.png';
+    document.getElementById("your-choice").src = '/Rock-Paper-Scissor/images/' + you + '.png';
 
     opponent = choices[Math.floor(Math.random() * 3)];
-    document.getElementById('opponent-choice').src = 'Rock-Paper-Scissor/images/' + opponent + '.png';
+    document.getElementById('opponent-choice').src = '/Rock-Paper-Scissor/images/' + opponent + '.png';
 
     if(opponent == you)
     {
